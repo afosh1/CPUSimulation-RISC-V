@@ -101,7 +101,7 @@ int32_t RISCV_CPU::GenerateImmediate(uint32_t inst, uint32_t opcode) {
         case OpcodeType::AUIPC:
             imm = inst & 0xFFFFF000; // Zero out the bottom 12 bits
             break;
-
+        
         // --- UJ-Type (Unconditional Jump) ---
         // Instructions: JAL
         // Scrambled similar to B-Type but larger (20 bits)
@@ -444,4 +444,5 @@ FString RISCV_CPU::Disassemble(const DecodedInstruction& inst) {
 
     default: return TEXT("UNKNOWN INST");
     }
+
 }
