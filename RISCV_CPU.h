@@ -47,7 +47,6 @@ public:
     // Helper to print details to the console (for debugging purposes)
     void PrintDecodedInst(const DecodedInstruction& dec);
 
-
     // Memory size
     static const uint32_t MEMORY_SIZE = 1024 * 1024;
 
@@ -86,4 +85,5 @@ private:
     std::vector<uint8_t> Memory;
     uint32_t MemRead(uint32_t addr, int size, bool signed_extend);
     void MemWrite(uint32_t addr, uint32_t data, int size);
+
 };
